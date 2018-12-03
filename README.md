@@ -1,14 +1,16 @@
 # printf_extension_example
 ### GNU Glibc printf extension passing a structure
 
-The example in the glibc documentation only passes a pointer
+The example in the glibc documentation only passes a pointer to a structure
 
 
 See <https://www.gnu.org/software/libc/manual/html_node/Printf-Extension-Example.html#Printf-Extension-Example>
 
-The only documentation for struct types appears to be the test code in the glibc source
+The only documentation for passing struct types appears to be the test code in the glibc source
 
-eg <https://github.com/lattera/glibc/blob/master/stdio-common/tst-vfprintf-user-type.c>
+eg <code>glibc/2.28/stdio-common/tst-vfprintf-user-type.c</code>
+
+See <https://github.com/lattera/glibc/blob/master/stdio-common/tst-vfprintf-user-type.c>
 
 This test code takes a format specifier that consumes two printf args and prints a struct 
 
