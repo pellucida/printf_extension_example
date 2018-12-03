@@ -50,7 +50,9 @@ int	print_widget (
 		const struct printf_info* info,
 		const void* const* args)
 {
-	WIDGET	w	= ***(WIDGET***)(args); //Triple indirection
+// Triple indirection. See glibc/stdio-common/tst-vfprintf-user-type.c
+	WIDGET	w	= ***(WIDGET***)(args);
+
 	char*	buffer	= 0;
 	int	len	= asprintf (&buffer, "<Widget %s @(%d,%d)>",
 				w.name, w.position.x, w.position.y);
@@ -74,7 +76,7 @@ int main (void) {
   	printf ("|%W|\n", mywidget);
 	printf ("|%55W|\n", mywidget);
 	printf ("|%-55W|\n", mywidget);
-	{
+	{ // Check that sprintf() works too :)
 	char	buffer[1024];
 	sprintf ( buffer, "|%-55W|\n", mywidget);
 	fputs (buffer, stderr);
