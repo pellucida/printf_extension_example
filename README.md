@@ -16,7 +16,7 @@ This test code takes a format specifier that consumes two printf args and prints
 
 ### Example passing widget by value to printf()
 
-The exmample in src/widget.c is an extension to the example in the glibc manual.
+The example in src/widget.c is an extension to the example in the glibc manual.
 Instead of passing a pointer to the Widget to *printf()* 
 the widget struct is passed by value.
 
