@@ -21,8 +21,8 @@ Instead of passing a pointer to the Widget to *printf()*
 the widget struct is passed by value.
 
 
-While it appears that only the \**printf(FILE\* )*  functions are supported
+While it appears that only the \**printf(FILE\* )*  functions are supported,
 glibc must use string streams *fmemopen(3)*
-to implement the \**s[n]printf()*  functions as these also work with format extensions.
+to implement the \**s[n]printf()*  functions as these also <em>work</em> with format extensions.
 
 See <https://www.gnu.org/software/libc/manual/html_node/String-Streams.html#String-Streams>
